@@ -11,12 +11,12 @@ const Hero = ({ onViewWork }) => {
 
   const slideContent = [
     {
-      title: "Nico John Colo",
+      title: "Nico's Portfolio",
       subtitle: "Creative Developer & UI Specialist",
       description: "Figma-to-Code specialist building stunning front-ends and scalable applications"
     },
     {
-      title: "Nico John Colo",
+      title: "Nico's Portfolio",
       subtitle: "Project Manager & Scrum Master",
       description: "Leading teams to deliver successful projects through Agile methodologies and effective project management"
     },
@@ -90,7 +90,7 @@ const Hero = ({ onViewWork }) => {
         <div className="profile-wrapper">
           <div className="profile-outer">
             <div className="profile-inner">
-              <div className="profile-placeholder">NJC</div>
+              <img src="/nicohome.png" alt="Nico" className="profile-image" />
             </div>
           </div>
         </div>
