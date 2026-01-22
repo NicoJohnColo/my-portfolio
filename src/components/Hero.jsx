@@ -18,12 +18,12 @@ const Hero = ({ onViewWork }) => {
     {
       title: "Nico's Portfolio",
       subtitle: "Project Manager & Scrum Master",
-      description: "Leading teams to deliver successful projects through Agile methodologies and effective project management"
+      description: "Delivering projects through Agile project management"
     },
     {
       title: "Full-Stack Developer",
       subtitle: "React | Springboot | django | tailwind",
-      description: "Creating robust web applications from concept to deployment with modern technologies and best practices"
+      description: "Creating robust web apps from concept to deployment with modern technologies and best practices"
     },
     {
       title: "UI/UX Enthusiast",
@@ -63,7 +63,7 @@ const Hero = ({ onViewWork }) => {
             <defs>
               <linearGradient id="leftGlow" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="transparent" />
-                <stop offset="50%" stopColor="rgb(168, 85, 247)" stopOpacity="0.6" />
+                <stop offset="50%" stopColor="#222" stopOpacity="0.6" />
                 <stop offset="100%" stopColor="transparent" />
               </linearGradient>
             </defs>
@@ -76,7 +76,7 @@ const Hero = ({ onViewWork }) => {
             <defs>
               <linearGradient id="rightGlow" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="transparent" />
-                <stop offset="50%" stopColor="rgb(168, 85, 247)" stopOpacity="0.6" />
+                <stop offset="50%" stopColor="#222" stopOpacity="0.6" />
                 <stop offset="100%" stopColor="transparent" />
               </linearGradient>
             </defs>
