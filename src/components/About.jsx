@@ -15,8 +15,6 @@ const About = () => {
       
       <div className={`about-container ${isVisible ? 'fade-in' : ''}`}>
         {/* Animated Background Gradient */}
-        <div className="gradient-orb gradient-orb-1"></div>
-        <div className="gradient-orb gradient-orb-2"></div>
         
         {/* Header */}
         <div className="about-header">
@@ -41,7 +39,7 @@ const About = () => {
             <p className="about-role">
               <span className="role-item">BSIT Student</span>
               <span className="role-divider">•</span>
-              <span className="role-item">Frontend Developer</span>
+              <span className="role-item">Full Stack Developer</span>
               <span className="role-divider">•</span>
               <span className="role-item">Scrum Master</span>
             </p>
@@ -65,7 +63,7 @@ const About = () => {
                 </svg>
                 View Resume
               </a>
-              <a href="mailto:nicojohncolo3@gmail.com" className="about-btn secondary">
+              <a href="mailto:nicojohn.colo@cit.edu" className="about-btn secondary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
@@ -103,7 +101,7 @@ const About = () => {
                 I continuously expand my skill set through self-learning, coursework,
                 and hands-on projects, with a focus on writing maintainable code,
                 following best practices, and delivering meaningful digital experiences
-                that make a real impact.
+                that make a real impact on this industry.
               </p>
             </div>
 
@@ -143,7 +141,7 @@ const About = () => {
                     <span className="tech-tag">HTML</span>
                     <span className="tech-tag">CSS</span>
                     <span className="tech-tag">JavaScript</span>
-                    <span className="tech-tag featured">React</span>
+                    <span className="tech-tag">React</span>
                     <span className="tech-tag">Tailwind CSS</span>
                   </div>
                 </div>

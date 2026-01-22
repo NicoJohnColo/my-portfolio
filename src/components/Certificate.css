@@ -3,7 +3,7 @@
    ============================================ */
 
 .certificates-section {
-  background: #000;
+  background: var(--surface);
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -65,7 +65,7 @@
 .gradient-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.5) 50%, #000 100%);
+  background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.06) 50%, var(--surface) 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -87,10 +87,7 @@
   font-weight: 900;
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
-  background: linear-gradient(135deg, #fff, #c4b5fd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text);
   animation: slideInFromTop 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -107,7 +104,7 @@
 
 .section-subtitle {
   font-size: 1.25rem;
-  color: #9ca3af;
+  color: var(--muted);
   margin-bottom: 3rem;
   font-family: 'Courier New', monospace;
   letter-spacing: 0.05em;
@@ -130,8 +127,8 @@
 }
 
 .certificate-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--muted-overlay);
+  border: 1px solid var(--glass-border);
   border-radius: 1rem;
   padding: 2rem;
   transition: transform 0.3s ease, background 0.3s ease;
@@ -140,15 +137,15 @@
 
 .certificate-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #a78bfa;
+  background: var(--muted-overlay-strong);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 .certificate-icon {
   width: 60px;
   height: 60px;
   margin: 0 auto 1.5rem;
-  color: #a78bfa;
+  color: var(--text);
 }
 
 .certificate-title {
@@ -158,19 +155,19 @@
 }
 
 .certificate-issuer {
-  color: #9ca3af;
+  color: var(--muted);
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .certificate-date {
-  color: #6b7280;
+  color: var(--muted);
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
 
 .certificate-id {
-  color: #4b5563;
+  color: var(--muted);
   font-size: 0.75rem;
   font-family: 'Courier New', monospace;
   margin-bottom: 1rem;
@@ -178,9 +175,9 @@
 
 .certificate-verify {
   padding: 0.5rem 1.5rem;
-  background: rgba(168, 85, 247, 0.1);
-  color: #c4b5fd;
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: var(--muted-overlay-strong);
+  color: var(--text);
+  border: 1px solid var(--glass-border);
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease;

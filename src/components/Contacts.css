@@ -3,7 +3,7 @@
    ============================================ */
 
 .contacts-section {
-  background: #000;
+  background: var(--surface);
   padding-bottom: 2rem;
 }
 
@@ -23,9 +23,9 @@
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--muted-overlay);
   border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
 }
 
 .contact-icon {
@@ -34,20 +34,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(168, 85, 247, 0.1);
+  background: var(--muted-overlay-strong);
   border-radius: 0.5rem;
-  color: #a78bfa;
+  color: var(--text);
   flex-shrink: 0;
 }
 
 .contact-item h4 {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: var(--muted);
   margin-bottom: 0.25rem;
 }
 
 .contact-item p {
-  color: #fff;
+  color: var(--text);
   font-weight: 500;
 }
 
@@ -59,24 +59,24 @@
 
 .social-link {
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  background: var(--muted-overlay);
+  color: var(--bg);
   text-decoration: none;
   border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   transition: all 0.3s ease;
   font-size: 0.875rem;
 }
 
 .social-link:hover {
-  background: rgba(168, 85, 247, 0.2);
-  border-color: #a78bfa;
+  background: var(--muted-overlay-strong);
+  border-color: var(--glass-border);
   transform: translateY(-2px);
 }
 
 .contact-form-wrapper {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--muted-overlay);
+  border: 1px solid var(--glass-border);
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -102,10 +102,10 @@
 .form-group input,
 .form-group textarea {
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
   border-radius: 0.5rem;
-  color: #fff;
+  color: var(--text);
   font-family: inherit;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -114,8 +114,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #a78bfa;
-  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  background: var(--bg);
 }
 
 .form-group textarea {
@@ -125,8 +125,8 @@
 
 .submit-button {
   padding: 1rem 2rem;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  color: #fff;
+  background: linear-gradient(to right, var(--accent), rgba(0,0,0,0.25));
+  color: var(--bg);
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -149,8 +149,8 @@
   text-align: center;
   padding: 2rem 0;
   margin-top: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #6b7280;
+  border-top: 1px solid var(--glass-border);
+  color: var(--muted);
   font-size: 0.875rem;
 }
 

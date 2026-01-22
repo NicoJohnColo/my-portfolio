@@ -5,6 +5,7 @@ import About from './About';
 import Projects from './Projects';
 import Certificates from './Certificate';
 import Contacts from './Contacts';
+import ThemeToggle from './ThemeToggle';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -12,6 +13,29 @@ const Portfolio = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  
+  // Theme (light / dark) with persistence and system preference fallback
+  const [theme, setTheme] = useState(() => {
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved;
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+    } catch (e) {}
+    return 'light';
+  });
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+  }, [theme]);
+
+  const toggleTheme = useCallback(() => setTheme(t => (t === 'dark' ? 'light' : 'dark')), []);
   
   // Simple smooth scroll using browser's native behavior
   const smoothScrollTo = useCallback((targetPosition) => {
@@ -172,20 +196,26 @@ const Portfolio = () => {
           >
             <img src="/nico-logo.png" alt="Nico John Colo" className="logo-img" />
           </div>
-          
+
           <ul className="nav-menu" role="navigation">
             {['home', 'about', 'projects', 'certificates', 'contacts'].map((section) => (
-              <li key={section}>
-                <button 
-                  className={`nav-btn ${activeSection === section ? 'nav-btn-active' : ''}`}
-                  onClick={() => scrollToSection(section)}
-                  aria-current={activeSection === section ? 'page' : undefined}
-                >
-                  <span className="nav-btn-text">
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                  </span>
-                  <span className="nav-btn-indicator" />
-                </button>
+              <li key={section} className="nav-item-with-toggle">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <button 
+                    className={`nav-btn ${activeSection === section ? 'nav-btn-active' : ''}`}
+                    onClick={() => scrollToSection(section)}
+                    aria-current={activeSection === section ? 'page' : undefined}
+                  >
+                    <span className="nav-btn-text">
+                      {section.charAt(0).toUpperCase() + section.slice(1)}
+                    </span>
+                    <span className="nav-btn-indicator" />
+                  </button>
+
+                  {section === 'contacts' && (
+                    <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                  )}
+                </div>
               </li>
             ))}
           </ul>
